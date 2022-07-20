@@ -46,6 +46,7 @@ function loadDocument() {
     let ajax = new XMLHttpRequest(); //Async javascript and XML
     ajax.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
+            document.querySelector('#employeeTableData').innerHTML = "<thead><tr class='employeeTableTitle'><th>name</th><th>lastname</th><th>sex</th><th>role</th><th>isSenior</th><th>age</th></tr></thead><tbody id='employeeTableRows'></tbody>";
             let k = this.responseText.replace("[{", "{");
             console.log(k);
             k = k.replace("}]", "}");
