@@ -1,0 +1,18 @@
+[
+    {
+        "name":"Ciccio_1",
+        "lastname":"Pasticcio_1",
+        "sex":"Male",
+        "role":"Developer",
+        "isSenior":false,
+        "age": 30
+    },
+    {
+        "name":"Ciccia_2",
+        "lastname":"Pasticcia_2",
+        "sex":"Female",
+        "role":"Full-stack dev",
+        "isSenior":true,
+        "age": 43
+    }
+]
