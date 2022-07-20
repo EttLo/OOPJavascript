@@ -4,12 +4,21 @@ body {
 
 #getEmployeeTableData {
     background-color: lightcoral;
-    color: brown;
+    color: rgb(118, 14, 14);
     font-size: 20;
+    border-radius: 10px;
+    border-color: rgb(118, 14, 14);
+    width: 50%;
+    transform: translateX(50%);
+}
+
+#employeeTableData {
+    width: 50%;
+    transform: translateX(50%);
 }
 
 .employeeTableTitle {
-    background-color: coral;
+    background-color: lightcoral;
     color: brown;
     font-size: 20;
     font-weight: bold;
@@ -28,6 +37,6 @@ body {
 }
 
 
-#menu tb:nth-child(n+1) {
+table #employeeTableData tb:nth-child(2n) {
     background-color: lightcoral;
 }

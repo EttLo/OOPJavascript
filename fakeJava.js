@@ -37,12 +37,17 @@ let div2 = document.querySelector("#myDiv");
 let divs = document.querySelectorAll(".myDiv"); //JQuery copy-cat
 
 //callback, it will be called later on
+
+let b = document.getElementById("getEmployeeTableData");
+b.addEventListener("click", () => { loadDocument() });
+b.addEventListener("click", () => { console.log("clicked") });
+
 function loadDocument() {
     let ajax = new XMLHttpRequest(); //Async javascript and XML
     ajax.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-
             let k = this.responseText.replace("[{", "{");
+            console.log(k);
             k = k.replace("}]", "}");
             let splittedData = this.responseText.split("},");
             // document.querySelector('#employeeTableData').innerHTML = this.responseText;
@@ -60,9 +65,5 @@ function loadDocument() {
     ajax.open("GET", "data.json");
     ajax.send();
 }
-
-let b = getElementById("getEmployeeTableData")
-b.onclick = loadDocument();
-
 
 
